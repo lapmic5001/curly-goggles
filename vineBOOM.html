@@ -21,14 +21,40 @@
         <audio id="sound1" src="fastboom.mp3" preload="auto"></audio>
         <audio id="sound2" src="vineboomrapid.mp3" preload="auto"></audio>
         <audio id="sound3" src="Vine%20Boom%20(Sound%20Effect).mp3" preload="auto"></audio>
-        <button onclick="document.getElementById('sound1').play();">
+        <button onclick="runb1()" id="b1">
             1
         </button>
-        <button onclick="document.getElementById('sound2').play();">
+        <button onclick="runb2()" id="b2">
             2
         </button>
-        <button onclick="document.getElementById('sound3').play();">
+        <button onclick="runb3()" id="b3">
             3
         </button>
+        <script>
+            function runb1() {
+                document.getElementById("b1").style.backgroundColor = "green"
+                document.getElementById('sound1').play();
+                setTimeout(function() { norb1(); }, 50);
+            }
+            function norb1() {
+                document.getElementById("b1").style.backgroundColor = "red"
+            }
+            function runb2() {
+                document.getElementById("b2").style.backgroundColor = "green"
+                document.getElementById('sound2').play();
+                setTimeout(function() { norb2(); }, 50);
+            }
+            function norb2() {
+                document.getElementById("b2").style.backgroundColor = "red"
+            }
+            function runb3() {
+                document.getElementById("b3").style.backgroundColor = "green"
+                document.getElementById('sound3').play();
+                setTimeout(function() { norb3(); }, 50);
+            }
+            function norb3() {
+                document.getElementById("b3").style.backgroundColor = "red"
+            }
+        </script>
     </body>
 </html>
